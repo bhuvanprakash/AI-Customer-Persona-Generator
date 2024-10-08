@@ -3,15 +3,15 @@ import openai
 
 app = Flask(__name__)
 
-# Setting up the API Key 
-openai.api_key = "YOUR-API-kEY"
+# Setting up the API Key
+openai.api_key = "YOUR-API-KEY"
 
 # Route to generate customer personas
 @app.route('/generate_persona', methods=['POST'])
 def generate_persona():
     data = request.json
-    product_info = data.get('product_info')
-    audience_info = data.get('audience_info')
+    product_info = data.get('product_info', 'Default Product')
+    audience_info = data.get('audience_info', 'Default Audience')
 
     # OpenAI GPT prompt
     prompt = f"Create a customer persona for a product: {product_info} targeting audience: {audience_info}"
@@ -27,5 +27,6 @@ def generate_persona():
 
     return jsonify({"persona": persona})
 
-    if __name__ == "__main__":
-     app.run(debug=True, host='0.0.0.0', port=5000)
+# Run the app
+if __name__ == "__main__":
+    app.run(debug=True, host='0.0.0.0', port=5000)
