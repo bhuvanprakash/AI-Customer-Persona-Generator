@@ -1,0 +1,192 @@
+/* 
+Author: Bhuvan Prakash
+Copyright: © 2023 Bhuvan Prakash
+Description: This CSS file styles the AI Customer Persona Generator web application.
+It provides a visually appealing and user-friendly interface.
+Usage: This CSS file is intended for use with the AI Customer Persona Generator web application.
+*/
+
+/* Global Styles */
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background: linear-gradient(135deg, #ffecd2, #fcb69f);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #333;
+  animation: backgroundAnimation 10s infinite alternate;
+  flex-direction: column;
+  text-align: center;
+}
+
+@keyframes backgroundAnimation {
+  0% {
+    background: linear-gradient(135deg, #ffecd2, #fcb69f);
+  }
+  100% {
+    background: linear-gradient(135deg, #fcb69f, #ffecd2);
+  }
+}
+
+/* Container Styles */
+.container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 30px;
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  border: 1px solid #fcb69f;
+  transition: transform 0.3s, box-shadow 0.3s;
+  animation: containerFadeIn 1s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@keyframes containerFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.15);
+}
+
+/* Heading Styles */
+h1 {
+  text-align: center;
+  color: #e74c3c;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  animation: textGlow 1.5s infinite alternate;
+}
+
+@keyframes textGlow {
+  from {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  to {
+    text-shadow: 1px 1px 8px rgba(231, 76, 60, 0.8);
+  }
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  margin-top: 10px;
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+input {
+  padding: 12px;
+  font-size: 16px;
+  margin-top: 5px;
+  border: 1px solid #fcb69f;
+  border-radius: 8px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  width: 100%;
+  max-width: 400px;
+}
+
+input:focus {
+  border-color: #e74c3c;
+  outline: none;
+  box-shadow: 0 0 8px rgba(231, 76, 60, 0.2);
+}
+
+/* Button Styles */
+button {
+  padding: 12px;
+  font-size: 16px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  margin-top: 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  animation: buttonPulse 2s infinite;
+  width: 100%;
+  max-width: 200px;
+}
+
+@keyframes buttonPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+button:hover {
+  background-color: #c0392b;
+  transform: translateY(-2px);
+}
+
+/* Output Styles */
+#output {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #fce4ec;
+  border-radius: 8px;
+  border: 1px solid #fcb69f;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  animation: outputFadeIn 1s ease-in-out;
+  width: 100%;
+  max-width: 500px;
+}
+
+@keyframes outputFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#personaResult {
+  font-size: 16px;
+  color: #e74c3c;
+}
+
+/* Footer Styles */
+.footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #333;
+}
+
+.footer a {
+  color: #e74c3c;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}

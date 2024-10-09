@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Customer Persona Generator</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">AI Customer Persona Generator</h1>
+    <form id="personaForm" class="form">
+      <div class="form-group">
+        <label for="product_info" class="form-label">Product Information</label>
+        <input type="text" id="product_info" name="product_info" class="form-input" required>
+      </div>
+
+      <div class="form-group">
+        <label for="audience_info" class="form-label">Audience Information</label>
+        <input type="text" id="audience_info" name="audience_info" class="form-input" required>
+      </div>
+
+      <button type="submit" class="btn">Generate Persona</button>
+    </form>
+
+    <div id="output" class="output">
+      <h2 class="output-title">Generated Persona</h2>
+      <p id="personaResult" class="output-text">Your persona will appear here...</p>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>© 2023 Bhuvan Prakash</p>
+    <p>This tool generates customer personas based on product and audience information provided by the user.</p>
+    <p>Usage: Enter the product and audience information, then click "Generate Persona" to get a detailed customer persona.</p>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
